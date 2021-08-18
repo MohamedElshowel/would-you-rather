@@ -26,7 +26,7 @@ function Nav() {
         </li>
         <li>
           {authedUser && (
-            <>
+            <div className="nav__user-info">
               <span>{`Hello, ${users[authedUser].name}`}</span>
               <img
                 src={users[authedUser].avatarURL}
@@ -34,7 +34,7 @@ function Nav() {
                 style={{ height: 25 }}
                 alt={`${users[authedUser].name}'s avatar`}
               />
-            </>
+            </div>
           )}
         </li>
         {authedUser && (

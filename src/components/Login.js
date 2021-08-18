@@ -52,7 +52,8 @@ function Login({ location }) {
           <span>Please sign in to continue</span>
         </div>
       }
-      headStyle={{ backgroundColor: "#dddd" }}
+      className="card"
+      headStyle={{ backgroundColor: "#eeeeee" }}
     >
       <div className="center">
         <h3>Sign In</h3>

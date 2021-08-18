@@ -31,9 +31,12 @@ function LeaderBoard() {
                       src={users[item.id].avatarURL}
                       alt={`${users[item.id].name}'s avatar`}
                     />
-                    <span><b>{users[item.id].name}</b></span>
+                    <span>
+                      <b>{users[item.id].name}</b>
+                    </span>
                   </>
                 }
+                className="card"
                 headStyle={{ backgroundColor: "#eeeeee" }}
               >
                 <div>{`Answered Questions: ${item.answersCount}`} </div>

@@ -14,7 +14,7 @@ function Home() {
     <div style={{ width: "50vw", margin: "auto" }}>
       <Tabs defaultActiveKey="1" type="card" size="large">
         <TabPane tab="Unanswered Questions" key="1">
-          <ul>
+          <ul className="center">
             {Object.keys(questions)
               .filter((item) => !Object.keys(answeredQuestions).includes(item))
               .sort((a, b) => questions[b].timestamp - questions[a].timestamp)
@@ -27,13 +27,15 @@ function Home() {
         </TabPane>
 
         <TabPane tab="Answered Questions" key="2">
-          {Object.keys(answeredQuestions)
-            .sort((a, b) => questions[b].timestamp - questions[a].timestamp)
-            .map((qid) => (
-              <li key={qid}>
-                <Question id={qid} />
-              </li>
-            ))}
+          <ul className="center">
+            {Object.keys(answeredQuestions)
+              .sort((a, b) => questions[b].timestamp - questions[a].timestamp)
+              .map((qid) => (
+                <li key={qid}>
+                  <Question id={qid} />
+                </li>
+              ))}
+          </ul>
         </TabPane>
       </Tabs>
     </div>

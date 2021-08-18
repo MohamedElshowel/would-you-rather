@@ -41,6 +41,7 @@ function Poll() {
             <h3>Would You Rather App</h3>
           </div>
         }
+        className="card"
         headStyle={{ backgroundColor: "#eeeeee" }}
       >
         <div>

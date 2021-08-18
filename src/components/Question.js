@@ -18,6 +18,7 @@ function Question({ id }) {
   return (
     <Card
       title={`${author.name} asks:`}
+      className="card"
       headStyle={{ backgroundColor: "#eeeeee" }}
     >
       <div className="center">
