@@ -1,5 +1,5 @@
 import { RECEIVE_USERS } from "../actions/users";
-import { SAVE_ANSWER } from "../actions/questions";
+import { ADD_QUESTION, SAVE_ANSWER } from "../actions/questions";
 
 export default function usersReducer(state = {}, action) {
   switch (action.type) {
@@ -14,6 +14,14 @@ export default function usersReducer(state = {}, action) {
             ...state[action.authedUser].answers,
             [action.id]: action.selectedOption,
           },
+        },
+      };
+    case ADD_QUESTION:
+      return {
+        ...state,
+        [action.question.author]: {
+          ...state[action.question.author],
+          questions: state[action.question.author].questions.concat([action.question.id]),
         },
       };
     default:
