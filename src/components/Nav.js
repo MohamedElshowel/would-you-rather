@@ -39,7 +39,7 @@ function Nav() {
         </li>
         {authedUser && (
           <li>
-            <NavLink to="/" exact>
+            <NavLink to="/login" exact>
               Logout
             </NavLink>
           </li>

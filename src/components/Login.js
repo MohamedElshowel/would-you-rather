@@ -5,7 +5,7 @@ import { Button, Card, Dropdown, Menu } from "antd";
 import { UserOutlined } from "@ant-design/icons";
 import { setAuthedUser } from "../actions/authedUser";
 
-function Login() {
+function Login({ location }) {
   const dispatch = useDispatch();
   const history = useHistory();
   const users = useSelector((state) => state.users);
@@ -19,7 +19,7 @@ function Login() {
 
   const changeAuthedUser = () => {
     dispatch(setAuthedUser(selectedUserId));
-    history.push("/home");
+    history.push(location.state?.redirectTo || "/home");
   };
 
   const usersMenu = (
