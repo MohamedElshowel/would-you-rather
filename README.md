@@ -24,18 +24,18 @@ This app is bootstrapped with [Create React App](https://github.com/facebookincu
 ---
 ## Folder Structure
 ```bash
-├── README.md - This file.
-├── package.json # npm package manager file.
-├── .gitignore   # To Ignore useless files/folder from git tracking.
+├── README.md           # This file.
+├── package.json        # npm package manager file.
+├── .gitignore          # To Ignore useless files/folder from git tracking.
 ├── public
-│   ├── favicon.ico # React Icon.
-│   └── index.html # Index HTML file
+│   ├── favicon.ico     # React Icon.
+│   └── index.html      # Index HTML file
 └── src
-    ├── components/ # App components.
-    ├── actions/         # Redux actions.
-    ├── middleware/      # Redux Middleware.
-    ├── reducers/        # Redux Reducers.
-    ├── utils/           # Fake API and its helpers.
-    ├── index.css         # Global styles.
-    └── index.js          # Index file used for React rendering on the DOM.
+    ├── components/     # App components.
+    ├── actions/        # Redux actions.
+    ├── middleware/     # Redux Middleware.
+    ├── reducers/       # Redux Reducers.
+    ├── utils/          # Fake API and its helpers.
+    ├── index.css       # Global styles.
+    └── index.js        # Index file used for React rendering on the DOM.
 ```
