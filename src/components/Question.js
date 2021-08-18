@@ -1,4 +1,4 @@
-import { Button } from "antd";
+import { Button, Card } from "antd";
 import React from "react";
 import { useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
@@ -16,22 +16,28 @@ function Question({ id }) {
   };
 
   return (
-    <div className="question">
-      <h4>{author.name} asks: </h4>
-      <div>
+    <Card
+      title={`${author.name} asks:`}
+      headStyle={{ backgroundColor: "#eeeeee" }}
+    >
+      <div className="center">
         <img
           src={author.avatarURL}
           className="avatar"
           alt={`${author.name}'s avatar`}
         />
-        <h5>Would you rather</h5>
+        <div>Would you rather</div>
         <ul>
-          <li>{data.optionOne.text}</li>
-          <li>{data.optionTwo.text}</li>
+          <b>{data.optionOne.text}</b>
+          <span> vs. </span>
+          <b>{data.optionTwo.text}</b>
         </ul>
-        <Button type="default" onClick={navigateToPoll}>View Poll</Button>
+        <br />
+        <Button type="default" onClick={navigateToPoll}>
+          View Poll
+        </Button>
       </div>
-    </div>
+    </Card>
   );
 }
 
