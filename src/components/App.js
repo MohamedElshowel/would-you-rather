@@ -7,12 +7,12 @@ import Nav from "./Nav";
 import Home from "./Home";
 import NewQuestion from "./NewQuestion";
 import Login from "./Login";
-import Poll from './Poll';
-import LeaderBoard from './LeaderBoard';
+import Poll from "./Poll";
+import LeaderBoard from "./LeaderBoard";
 
 class App extends Component {
   componentDidMount() {
-    this.props.dispatch(handleInitialData());
+    this.props.handleInitialData();
   }
 
   render() {
@@ -44,4 +44,4 @@ const mapStateToProps = ({ authedUser }) => ({
   authedUser,
 });
 
-export default connect(mapStateToProps)(App);
+export default connect(mapStateToProps, { handleInitialData })(App);
