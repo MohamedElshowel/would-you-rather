@@ -2,7 +2,7 @@ import React, { useRef, useState } from "react";
 import { useDispatch } from "react-redux";
 import { Redirect } from "react-router-dom";
 import { handleAddQuestion } from "../actions/questions";
-import { Button, Input } from "antd";
+import { Button, Card, Input } from "antd";
 
 function NewQuestion() {
   const [redirectToHome, setRedirectToHome] = useState(false);
@@ -34,18 +34,19 @@ function NewQuestion() {
   }
 
   return (
-    <div className="center" style={{ width: "40%", margin: "auto" }}>
-      <h1>Create New Question</h1>
-      <hr />
-      <form>
-        <span>Complete the question: </span>
-        <h4>Would you rather ...</h4>
+    <Card
+      title="Create New Question"
+      className="card"
+      headStyle={{ backgroundColor: "#eeeeee" }}
+    >
+      <form className="center">
+        <h2>Would you rather ...</h2>
         <Input
           type="text"
           ref={optionOneRef}
           placeholder="Enter Option One Text Here"
         />
-        <div>OR</div>
+        <span>OR</span>
         <Input
           type="text"
           ref={optionTwoRef}
@@ -56,12 +57,12 @@ function NewQuestion() {
         <Button
           type="primary"
           onClick={onSubmitQuestion}
-          style={{ width: "100%" }}
+          style={{ width: "100%", height: 40, fontSize: 15 }}
         >
           Submit
         </Button>
       </form>
-    </div>
+    </Card>
   );
 }
 
