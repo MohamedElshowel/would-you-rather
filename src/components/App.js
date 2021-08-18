@@ -4,7 +4,7 @@ import LoadingBar from "react-redux-loading";
 import { BrowserRouter } from "react-router-dom";
 import { handleInitialData } from "../actions/shared";
 import Nav from "./Nav";
-import Routers from "./Routers";
+import Routes from "./Routes";
 
 class App extends Component {
   componentDidMount() {
@@ -18,7 +18,7 @@ class App extends Component {
           <LoadingBar style={{ backgroundColor: "#1a7cf2" }} />
           <div className="container">
             <Nav />
-            <Routers authedUser={this.props.authedUser}/>
+            <Routes authedUser={this.props.authedUser}/>
           </div>
         </>
       </BrowserRouter>

@@ -7,7 +7,7 @@ import Poll from "./Poll";
 import LeaderBoard from "./LeaderBoard";
 import NotFound from "./NotFound";
 
-function Routers({ authedUser }) {
+function Routes({ authedUser }) {
   const getRedirectComponent = (redirectTo) => (
     <Redirect
       to={{
@@ -25,7 +25,7 @@ function Routers({ authedUser }) {
         {authedUser ? <Home /> : getRedirectComponent("/home")}
       </Route>
 
-      <Route path="/add" exact>
+      <Route path={["/add", "/new"]} exact>
         {authedUser ? <NewQuestion /> : getRedirectComponent("/add")}
       </Route>
 
@@ -44,4 +44,4 @@ function Routers({ authedUser }) {
   );
 }
 
-export default Routers;
+export default Routes;
