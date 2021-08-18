@@ -15,10 +15,10 @@ class App extends Component {
     return (
       <BrowserRouter>
         <>
-          <LoadingBar style={{ backgroundColor: "#1a7cf2" }} />
+          <LoadingBar style={{ backgroundColor: "#00a880" }} />
           <div className="container">
             <Nav />
-            <Routes authedUser={this.props.authedUser}/>
+            <Routes authedUser={this.props.authedUser} />
           </div>
         </>
       </BrowserRouter>

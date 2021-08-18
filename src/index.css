@@ -3,6 +3,7 @@ body {
   padding: 0;
   font-family: sans-serif;
   color: #252525;
+  background-color: #f7f7f7;
 }
 
 a {
@@ -11,9 +12,10 @@ a {
 }
 
 .container {
-  max-width: 1000px;
+  max-width: 800px;
   margin: 0 auto;
-  padding: 10px;
+  background-color: white;
+  padding-bottom: 20px;
 }
 
 .center {
@@ -24,19 +26,27 @@ a {
   font-weight: bold;
 }
 
+.nav {
+  background-color: #487da6;
+  height: 50px;
+  padding: 15px;
+  margin-bottom: 30px;
+}
+
 .nav ul {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   text-decoration: none;
+  margin-top: -12px;
 }
 
-.nav li:first-child {
-  padding-left: 0;
+.nav ul li, .nav ul li a {
+  color: white;
 }
 
-ul {
-  padding-left: 0;
+.nav ul li a:hover {
+  color: #02b3e4;
 }
 
 li {
