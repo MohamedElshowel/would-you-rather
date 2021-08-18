@@ -28,11 +28,11 @@ function Question({ id }) {
           alt={`${author.name}'s avatar`}
         />
         <div>Would you rather</div>
-        <ul>
+        <div>
           <b>{data.optionOne.text}</b>
           <span> vs. </span>
           <b>{data.optionTwo.text}</b>
-        </ul>
+        </div>
         <br />
         <Button type="default" onClick={navigateToPoll}>
           View Poll

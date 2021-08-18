@@ -54,22 +54,20 @@ function Poll() {
           {answeredQuestions[id] ? (
             <div className="center">
               <h2>Results:</h2>
-              <ul>
-                <li>
-                  <b>{data.optionOne.text}: </b>
-                  {`${optionOneVotesCount} out of ${totalVotesCount} votes (${Math.round(
-                    (optionOneVotesCount / totalVotesCount) * 100
-                  )}%)`}
-                  {answeredQuestions[id] === "optionOne" && <span> ✅</span>}
-                </li>
-                <li>
-                  <b>{data.optionTwo.text}: </b>
-                  {`${optionTwoVotesCount} out of ${totalVotesCount} votes (${Math.round(
-                    (optionTwoVotesCount / totalVotesCount) * 100
-                  )}%)`}
-                  {answeredQuestions[id] === "optionTwo" && <span> ✅</span>}
-                </li>
-              </ul>
+              <div>
+                <b>{data.optionOne.text}: </b>
+                {`${optionOneVotesCount} out of ${totalVotesCount} votes (${Math.round(
+                  (optionOneVotesCount / totalVotesCount) * 100
+                )}%)`}
+                {answeredQuestions[id] === "optionOne" && <span> ✅</span>}
+              </div>
+              <div>
+                <b>{data.optionTwo.text}: </b>
+                {`${optionTwoVotesCount} out of ${totalVotesCount} votes (${Math.round(
+                  (optionTwoVotesCount / totalVotesCount) * 100
+                )}%)`}
+                {answeredQuestions[id] === "optionTwo" && <span> ✅</span>}
+              </div>
             </div>
           ) : (
             <div className="center">
